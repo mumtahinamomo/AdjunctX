@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formMessage.textContent = "Submitting...";
   
         try {
-            const response = await fetch("https://script.google.com/macros/s/AKfycbxXV7ss2eBb7N5t8Y_Yc7Q2SqsvworryQcJqWUVw-uHXdU_PZ_fD5PwzPUsu7seF88Ygw/exec", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbxi7KLgKabKHRDvTCYCngyjTQmWJ2MrR0d2x9_MWglCP8FjUzaNMrWOwAT707pJ7kiD/exec", {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json"
