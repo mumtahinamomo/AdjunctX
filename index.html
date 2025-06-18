@@ -42,10 +42,20 @@
         <span class="block">On LinkedIn, you send <span class="font-semibold">Connection Requests</span>.</span>
         <span class="block mt-1">On <span class="font-semibold text-blue-500">AdjunctX</span>, you send <span class="font-semibold">Lecture Requests</span>.</span>
       </p>          
-      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
-        <input type="email" placeholder="Enter your email" required class="flex-1 h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500" />
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 h-12 rounded-lg transition-all duration-200 hover:scale-105">Join Waitlist</button>
+      <form id="waitlistForm" class="flex flex-col gap-4 max-w-md mx-auto mb-8">
+        <input type="text" name="name" placeholder="Your name" required class="h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500" />
+        <input type="email" name="email" placeholder="Your email" required class="h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500" />
+        <select name="role" required class="h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500">
+          <option value="">Select role</option>
+          <option value="Learner">Learner</option>
+          <option value="Instructor">Instructor</option>
+        </select>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 h-12 rounded-lg transition-all duration-200 hover:scale-105">
+          Join Waitlist
+        </button>
+        <p id="formMessage" class="text-sm text-gray-500 mt-2"></p>
       </form>
+      
       <p class="text-sm text-gray-500">Join learners and instructors from all over the world on the waitlist</p>
     </div>
   </section>
@@ -324,3 +334,6 @@
     </div>
   </div>
 </footer>
+
+<script src="waitlist.js"></script>
+
