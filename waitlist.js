@@ -22,17 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify({ name, email, role })
           });
   
-          if (response.ok) {
-            form.reset();
-            formMessage.textContent = "🎉 You're on the waitlist!";
-          } else {
-            formMessage.textContent = "⚠️ Something went wrong. Please try again.";
-          }
+          form.reset();
+          formMessage.textContent = "Successfully received! You're on the AdjunctX waitlist.";
         } catch (error) {
           console.error("Error submitting form:", error);
-          formMessage.textContent = "❌ Network error. Try again later.";
+          formMessage.textContent = "Network error. Please check your connection and try again.";
         }
-      });
-    }
-  });
+    });
+  }
+});
   
