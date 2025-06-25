@@ -11,24 +11,69 @@
   </style>
 </head>
 <body class="bg-white">
+
   <!-- Navigation -->
-  <nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <div class="flex items-center space-x-2">
-          <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
-          <span class="text-xl font-bold text-gray-900">AdjunctX</span>
-        </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#how-it-works" class="text-gray-600 hover:text-blue-500 transition-colors">How it Works</a>
-          <a href="#for-instructors" class="text-gray-600 hover:text-blue-500 transition-colors">For Instructors</a>
-          <a href="#for-learners" class="text-gray-600 hover:text-blue-500 transition-colors">For Learners</a>
-          <a href="#team" class="text-gray-600 hover:text-blue-500 transition-colors">Team</a>
-        </div>
-        <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105">Join Waitlist</button>
+<nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+        <span class="text-xl font-bold text-gray-900">AdjunctX</span>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#how-it-works" class="text-gray-600 hover:text-blue-500 font-medium">How it Works</a>
+        <a href="#for-instructors" class="text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+        <a href="#for-learners" class="text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+        <a href="#news" class="text-gray-600 hover:text-blue-500 font-medium">News</a>
+        <a href="impact.html" class="text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+        <a href="#team" class="text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      </div>
+
+      <!-- Join Waitlist Button (desktop only) -->
+      <div class="hidden md:block">
+        <a href="#waitlist" class="hidden md:inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105">
+          Join Waitlist
+        </a>
+      </div>
+
+      <!-- Hamburger Button (mobile only) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 pb-6">
+      <a href="#how-it-works" class="block text-gray-600 hover:text-blue-500 font-medium">How it Works</a>
+      <a href="#for-instructors" class="block text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+      <a href="#for-learners" class="block text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+      <a href="#news" class="block text-gray-600 hover:text-blue-500 font-medium">News</a>
+      <a href="impact.html" class="block text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+      <a href="#team" class="block text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      <a href="#waitlist" class="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105 text-center block">
+        Join Waitlist
+      </a>      
+    </div>
+  </div>
+</nav>
+
+<!-- Toggle Script -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 
   <!-- Hero Section -->
   <section class="relative py-20 lg:py-28 bg-gradient-to-br from-blue-50 to-white overflow-hidden text-center">
@@ -41,7 +86,8 @@
       <p class="mt-12 text-base font-medium text-gray-800 mb-8 max-w-3xl mx-auto">
         <span class="block">On LinkedIn, you send <span class="font-semibold">Connection Requests</span>.</span>
         <span class="block mt-1">On <span class="font-semibold text-blue-500">AdjunctX</span>, you send <span class="font-semibold">Lecture Requests</span>.</span>
-      </p>          
+      </p>     
+      <div id="waitlist"></div>     
       <form id="waitlistForm" class="flex flex-col gap-4 max-w-md mx-auto mb-8">
         <input type="text" name="name" placeholder="Your name" required class="h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500" />
         <input type="email" name="email" placeholder="Your email" required class="h-12 px-4 rounded-lg border-2 border-gray-200 focus:border-blue-500" />
@@ -308,6 +354,27 @@
 </section>
 
 
+<section id="news" class="bg-white py-24 text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-4xl font-bold mb-12 text-center">Latest News</h2>
+
+    <div class="space-y-10">
+      <!-- News Item 1 -->
+      <div class="flex items-start space-x-4 hover:bg-gray-50 p-4 rounded-lg transition">
+        <img src="AdjunctX_Images/asper_brandeis.png" alt="AdjunctX wins award" class="w-28 h-20 object-cover rounded-md" />
+        <div class="flex-1">
+          <p class="text-xs font-semibold text-[#4687FF] uppercase mb-1">Award</p>
+          <a href="news-ain-award.html" target="_blank" class="text-xl font-semibold text-gray-900 hover:underline block mb-1">
+            AdjunctX Wins Ain Family Start-Up Award at Brandeis University
+          </a>
+          <p class="text-sm text-gray-500">AdjunctX Team – June 23, 2025</p>
+        </div>
+      </div>
+
+      <!-- Add more articles below in the same format -->
+    </div>
+  </div>
+</section>
 
   <!-- Team Section -->
 <section class="bg-white py-24" id="team">
@@ -438,4 +505,3 @@
 </footer>
 
 <script src="waitlist.js"></script>
-
