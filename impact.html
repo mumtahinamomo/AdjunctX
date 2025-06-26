@@ -15,30 +15,84 @@
   </style>
 </head>
 <body class="bg-white text-gray-800">
-  <section class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-    <h1 class="text-4xl font-bold mb-6 text-center text-blue-600">Our Impact</h1>
-    <p class="text-lg text-center mb-12">
-      Till the end of May 2025, our solution has served <strong>92 learners</strong>, and enabled <strong>3 instructors</strong> in deep tech, climate & sustainability, and mental health to share their expertise in a way they had not done before. 
-      Many of our learners are entrepreneurs running their own ventures, who have collectively raised around <strong>US $68,500</strong> in grants and investments.
-    </p>
-    <p class="text-center text-md mb-16">Here are some of the ventures our learners have started:</p>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Envirocove -->
-      <a href="envirocove.html" class="block relative bg-white border rounded-xl overflow-hidden shadow hover:shadow-xl transition group card">
-        <img src="AdjunctX_Images/envirocove.jpg" alt="Envirocove" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="text-xl font-semibold text-gray-900">Envirocove</h3>
-          <p class="text-sm text-gray-600">Founder: <span class="text-blue-500 underline">Sihab Bin Toriq</span></p>
-        </div>
-        <div class="absolute inset-0 bg-white bg-opacity-95 p-4 mission-blurb opacity-0 transform translate-y-4 transition duration-300 group-hover:opacity-100 group-hover:translate-y-0 z-10">
-          <p class="text-sm text-gray-700">
-            A multi-vendor marketplace connecting 600+ vendors with 32,000+ repair businesses across Bangladesh to enable affordable, reusable electronics and reduce e-waste.
-          </p>
-        </div>
-      </a>
+<!-- Navigation -->
+<nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+        <span class="text-xl font-bold text-gray-900">AdjunctX</span>
+      </div>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="text-gray-600 hover:text-blue-500 font-medium">About</a>
+        <a href="instructors.html" class="text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+        <a href="learners.html" class="text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+        <a href="news.html" class="text-gray-600 hover:text-blue-500 font-medium">News</a>
+        <a href="impact.html" class="text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+        <a href="index.html#team" class="text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      </div>
+      <!-- Waitlist Button -->
+      <div class="hidden md:block">
+        <a href="index.html#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105">
+          Join Waitlist
+        </a>
+      </div>
+      <!-- Hamburger (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 pb-6">
+      <a href="index.html#about" class="block text-gray-600 hover:text-blue-500 font-medium">About</a>
+      <a href="instructors.html" class="block text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+      <a href="learners.html" class="block text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+      <a href="news.html" class="block text-gray-600 hover:text-blue-500 font-medium">News</a>
+      <a href="impact.html" class="block text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+      <a href="index.html#team" class="block text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      <a href="index.html#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-center block">Join Waitlist</a>
+    </div>
+  </div>
+</nav>
 
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- Our Impact Section -->
+<section class="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+  <h1 class="text-4xl font-bold mb-6 text-center text-blue-600">Our Impact</h1>
+  <p class="text-lg text-center mb-12">
+    Till the end of May 2025, our solution has served <strong>92 learners</strong>, and enabled <strong>3 instructors</strong> in deep tech, climate & sustainability, and mental health to share their expertise in a way they had not done before. 
+    Many of our learners are entrepreneurs running their own ventures, who have collectively raised around <strong>US $68,500</strong> in grants and investments.
+  </p>
+  <p class="text-center text-md mb-16">Here are some of the ventures our learners have started:</p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- envirocove: -->
+    <a href="envirocove.html" class="block relative bg-white border rounded-xl overflow-hidden shadow hover:shadow-xl transition group card">
+      <img src="AdjunctX_Images/envirocove.jpg" alt="Envirocove" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold text-gray-900">Envirocove</h3>
+        <p class="text-sm text-gray-600">Founder: <span class="text-blue-500 underline">Sihab Bin Toriq</span></p>
+      </div>
+      <div class="absolute inset-0 bg-white bg-opacity-95 p-4 mission-blurb opacity-0 transform translate-y-4 transition duration-300 group-hover:opacity-100 group-hover:translate-y-0 z-10">
+        <p class="text-sm text-gray-700">
+          A multi-vendor marketplace connecting 600+ vendors with 32,000+ repair businesses across Bangladesh to enable affordable, reusable electronics and reduce e-waste.
+        </p>
+      </div>
+    </a>
 
       <!-- Pritilata -->
       <a href="pritilata.html" class="block relative bg-white border rounded-xl overflow-hidden shadow hover:shadow-xl transition group card">
@@ -112,5 +166,50 @@
 
     </div>
   </section>
+  <!-- Footer -->
+<footer class="bg-[#1E319B] text-white py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 text-sm">
+      <!-- Logo and Tagline -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+          <span class="text-lg font-bold">AdjunctX</span>
+        </div>
+        <p class="text-gray-300">Where Earth's best minds teach, on-request.</p>
+      </div>
+      <!-- Product Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#how-it-works" class="hover:text-[#89B4FF]">How it Works</a></li>
+          <li><a href="learners.html" class="hover:text-[#89B4FF]">For Learners</a></li>
+          <li><a href="instructors.html" class="hover:text-[#89B4FF]">For Instructors</a></li>
+        </ul>
+      </div>
+      <!-- Company Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#team" class="hover:text-[#89B4FF]">Team</a></li>
+          <li><a href="index.html#about" class="hover:text-[#89B4FF]">About</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contact</h4>
+        <ul class="space-y-2">
+          <li><a href="mailto:Md_Jahirul.Islam@tufts.edu" class="hover:text-[#89B4FF]">Md_Jahirul.Islam@tufts.edu</a></li>
+          <li><a href="mailto:mumtahinamomo@brandeis.edu" class="hover:text-[#89B4FF]">mumtahinamomo@brandeis.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-xs text-gray-300">
+      &copy; 2025 AdjunctX. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
 </body>
 </html>

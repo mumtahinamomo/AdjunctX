@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AdjunctX | For Instructors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+<!-- Navigation -->
+<nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center space-x-2">
+        <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+        <span class="text-xl font-bold text-gray-900">AdjunctX</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="text-gray-600 hover:text-blue-500 font-medium">About</a>
+        <a href="instructors.html" class="text-blue-600 font-semibold">For Instructors</a>
+        <a href="learners.html" class="text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+        <a href="index.html#news" class="text-gray-600 hover:text-blue-500 font-medium">News</a>
+        <a href="impact.html" class="text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+        <a href="index.html#team" class="text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="index.html#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105">
+          Join Waitlist
+        </a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 pb-6">
+      <a href="index.html#about" class="block text-gray-600 hover:text-blue-500 font-medium">About</a>
+      <a href="instructors.html" class="block text-blue-600 font-semibold">For Instructors</a>
+      <a href="learners.html" class="block text-gray-600 hover:text-blue-500 font-medium">For Learners</a>
+      <a href="index.html#news" class="block text-gray-600 hover:text-blue-500 font-medium">News</a>
+      <a href="impact.html" class="block text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+      <a href="index.html#team" class="block text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      <a href="index.html#waitlist" class="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105 text-center block">
+        Join Waitlist
+      </a>      
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<main class="flex-grow">
+  <section class="bg-white py-24" id="for-instructors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">For Instructors: Teach What You Love</h2>
+      <p class="text-xl text-gray-600 mb-12 max-w-3xl">Inspire the next generation. Share your knowledge - when you want, how you want</p>
+
+      <div class="grid md:grid-cols-4 gap-8 mb-16">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">🚪 No Gatekeepers</h4>
+          <p class="text-gray-600">Teach those who want to learn from you, from any part of the world. Schedule a live session, upload recorded material or decline a lecture request. It’s your call.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">💸 Earn On-Demand</h4>
+          <p class="text-gray-600">Get paid per lecture, no need to chase subscribers or views like other platforms.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">🌍 Build Your Legacy</h4>
+          <p class="text-gray-600">Reach curious minds and share what only you can teach.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">💡 Reserve Your Ideas</h4>
+          <p class="text-gray-600">Your knowledge deserves an audience. Be the reason someone learns something life-changing for decades to come.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-8 shadow">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Instructors from Boardrooms, Industry, Classrooms, Labs, and Every Corner of Earth</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-y-4 text-gray-800">
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Successful Entrepreneurs</span></div>
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Renowned Professors</span></div>
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Investors & VCs</span></div>
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Industry Experts</span></div>
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Thought Leaders</span></div>
+          <div class="flex items-center space-x-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span><span>Research Scientists</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1E319B] text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+          <span class="text-lg font-bold">AdjunctX</span>
+        </div>
+        <p class="text-gray-300">Where Earth's best minds teach, on-request.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#about" class="hover:text-[#89B4FF]">How it Works</a></li>
+          <li><a href="learners.html" class="hover:text-[#89B4FF]">For Learners</a></li>
+          <li><a href="instructors.html" class="hover:text-[#89B4FF]">For Instructors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#team" class="hover:text-[#89B4FF]">Team</a></li>
+          <li><a href="index.html#about" class="hover:text-[#89B4FF]">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contact</h4>
+        <ul class="space-y-2">
+          <li><a href="mailto:Md_Jahirul.Islam@tufts.edu" class="hover:text-[#89B4FF]">Md_Jahirul.Islam@tufts.edu</a></li>
+          <li><a href="mailto:mumtahinamomo@brandeis.edu" class="hover:text-[#89B4FF]">mumtahinamomo@brandeis.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-xs text-gray-300">
+      &copy; 2025 AdjunctX. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

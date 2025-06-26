@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AdjunctX | For Learners</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
+
+<!-- Navigation -->
+<nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center space-x-2">
+        <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+        <span class="text-xl font-bold text-gray-900">AdjunctX</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html#about" class="text-gray-600 hover:text-blue-500 font-medium">About</a>
+        <a href="instructors.html" class="text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+        <a href="learners.html" class="text-blue-600 font-semibold">For Learners</a>
+        <a href="index.html#news" class="text-gray-600 hover:text-blue-500 font-medium">News</a>
+        <a href="impact.html" class="text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+        <a href="index.html#team" class="text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      </div>
+      <div class="hidden md:block">
+        <a href="index.html#waitlist" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105">
+          Join Waitlist
+        </a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 pb-6">
+      <a href="index.html#about" class="block text-gray-600 hover:text-blue-500 font-medium">About</a>
+      <a href="instructors.html" class="block text-gray-600 hover:text-blue-500 font-medium">For Instructors</a>
+      <a href="learners.html" class="block text-blue-600 font-semibold">For Learners</a>
+      <a href="index.html#news" class="block text-gray-600 hover:text-blue-500 font-medium">News</a>
+      <a href="impact.html" class="block text-gray-600 hover:text-blue-500 font-medium">Our Impact</a>
+      <a href="index.html#team" class="block text-gray-600 hover:text-blue-500 font-medium">Team</a>
+      <a href="index.html#waitlist" class="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-200 hover:scale-105 text-center block">
+        Join Waitlist
+      </a>      
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+<main class="flex-grow">
+  <!-- For Learners Section -->
+  <section class="bg-white py-24" id="for-learners">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">For Learners: Get Exactly What You Need</h2>
+      <p class="text-xl text-gray-600 mb-12 max-w-3xl">
+        Stop wasting time on endless video playlists. Tell us what you want to learn, who you want to learn from, and we’ll deliver it. On your terms.  
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-xl mb-16 shadow-sm">
+        <p class="text-gray-800 text-base leading-relaxed">
+          Maybe you’ve always wanted to understand how Duolingo built a habit-forming streak system, so you ask the designer who created it. 
+          Or you’re building your first startup and want real advice, so you connect with a founder who scaled their product from 0 to 50,000 users. 
+          These aren’t random videos or recycled talks. They’re real conversations built around your questions, with the people who’ve actually done the work. 
+          <strong>One request can give you (and so many others for decades) insight, direction, and access that changes everything.</strong>
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8 mb-16">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">🧠 Choose Your Topic</h4>
+          <p class="text-gray-600">Say exactly what you want to learn. No more guesswork or generic content.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">🎯 Choose Your Instructor</h4>
+          <p class="text-gray-600">Learn from someone whose story and style actually resonate with you.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">📅 Learn On Your Terms</h4>
+          <p class="text-gray-600">Short, focused sessions designed to fit your time, goals, and pace.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 rounded-xl p-8 shadow">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Your Learning, Elevated</h3>
+        <ul class="list-disc list-inside text-gray-800 space-y-3 text-base leading-relaxed">
+          <li>Personalized content based on your needs</li>
+          <li>Direct interaction with expert instructors</li>
+          <li>Access to knowledge you won’t find anywhere else</li>
+          <li>Learn at your own pace, on your own schedule</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1E319B] text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="AdjunctX_Images/logo.png" alt="AdjunctX Logo" class="w-8 h-8" />
+          <span class="text-lg font-bold">AdjunctX</span>
+        </div>
+        <p class="text-gray-300">Where Earth's best minds teach, on-request.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#about" class="hover:text-[#89B4FF]">How it Works</a></li>
+          <li><a href="learners.html" class="hover:text-[#89B4FF]">For Learners</a></li>
+          <li><a href="instructors.html" class="hover:text-[#89B4FF]">For Instructors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#team" class="hover:text-[#89B4FF]">Team</a></li>
+          <li><a href="index.html#about" class="hover:text-[#89B4FF]">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contact</h4>
+        <ul class="space-y-2">
+          <li><a href="mailto:Md_Jahirul.Islam@tufts.edu" class="hover:text-[#89B4FF]">Md_Jahirul.Islam@tufts.edu</a></li>
+          <li><a href="mailto:mumtahinamomo@brandeis.edu" class="hover:text-[#89B4FF]">mumtahinamomo@brandeis.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-xs text-gray-300">
+      &copy; 2025 AdjunctX. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
